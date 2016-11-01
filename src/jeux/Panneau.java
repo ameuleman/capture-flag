@@ -17,7 +17,7 @@ import personnages.Personnage;
 /**
  * 
  * @author Meuleman
- * Panneau sur lequel tout sera dessinï¿½
+ * Panneau sur lequel tout sera dessiné
  */
 public class Panneau extends JPanel{
 
@@ -33,6 +33,7 @@ public class Panneau extends JPanel{
 	
 	/**
 	 * Constructeur de Panneau, stocke l'image de fond du labyrinthe dans buffImg puis l'affiche avec les personnages
+	 * 
 	 * @param tailleCase Taille d'une case du labyrinthe en pixels
 	 * @param nbCases nombre de cases de la longueur du labyrinthe
 	 * @param tailleFenetre Taille de la longueure du labyrinthe en pixels
@@ -90,7 +91,7 @@ public class Panneau extends JPanel{
 	}
 	
 	/**
-	 * La faï¿½on dont les ï¿½lï¿½ments doivent ï¿½tre dessinï¿½s sur le panneau
+	 * La façon dont les éléments doivent être dessinés sur le panneau
 	 */
 	public synchronized void paintComponent(Graphics g){
 		Graphics2D g2d = (Graphics2D) g.create();

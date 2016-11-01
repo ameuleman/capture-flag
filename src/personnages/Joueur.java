@@ -8,9 +8,9 @@ import javax.swing.ImageIcon;
 import jeux.Fenetre;
 
 /**
- * Class hï¿½ritant de Personnage
+ * Class héritant de Personnage
  * @author Meuleman
- * Reprï¿½sente un personnage controlable par un joueur
+ * Représente un personnage controlable par un joueur
  */
 public class Joueur extends Personnage {
 	private int up, left, right, down;
@@ -23,10 +23,10 @@ public class Joueur extends Personnage {
 	 * @param y
 	 * @param tailleCase
 	 * @param delay
-	 * @param up Code de la touche qui permettra de dï¿½placer le personnage vers le haut
+	 * @param up Code de la touche qui permettra de déplacer le personnage vers le haut
 	 * @param down Vers le bas
-	 * @param left ï¿½ gauche
-	 * @param right ï¿½ droite
+	 * @param left é gauche
+	 * @param right é droite
 	 */
 	public Joueur(Fenetre fen, int num, int x, int y, int tailleCase, int delay, int up, int down, int left, int right){
 		super(fen, "joueur"+num, x,y,tailleCase, delay);
@@ -54,7 +54,7 @@ public class Joueur extends Personnage {
 	/**
 	 * 
 	 * @author Meuleman
-	 * Permet de contrï¿½ler le personnage avec le clavier
+	 * Permet de contrôler le personnage avec le clavier
 	 */
 	class ClavierListener implements KeyListener{
 		public void keyReleased(KeyEvent arg0){}

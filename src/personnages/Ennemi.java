@@ -3,14 +3,14 @@ package personnages;
 import jeux.Fenetre;
 
 /**
- * Class hï¿½ritant de Personnage
+ * Class héritant de Personnage
  * @author Meuleman
- * Reprï¿½sente un ennemi non-joueur que le joueur doit ï¿½viter
+ * Représente un ennemi non-joueur que le joueur doit éviter
  */
 public class Ennemi extends Personnage implements Comportement{
 	
 	/**
-	 *  Constructeur d'Ennemi, lance un thread propre ï¿½ chaque ennemi
+	 *  Constructeur d'Ennemi, lance un thread propre à chaque ennemi
 	 * @param fen La fenetre d'affichage
 	 * @param nomSprite
 	 * @param x
@@ -25,7 +25,7 @@ public class Ennemi extends Personnage implements Comportement{
 	}
 	
 	/**
-	 * Comportement de l'ennemi alï¿½atoire
+	 * Comportement de l'ennemi aléatoire
 	 */
 	public synchronized void comportement(){
 		int alea;

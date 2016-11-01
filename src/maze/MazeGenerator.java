@@ -6,7 +6,7 @@ import java.util.*;
 
 /**
  * @author Nathan ROUXELIN
- * GÃ©nÃ¨re un labyrinthe
+ * Génère un labyrinthe
  */
 public class MazeGenerator {
 	
@@ -30,8 +30,8 @@ public class MazeGenerator {
 		
 	}
 	/**
-	 * GÃ©nÃ¨re un labyrinthe en utilisant l'algorithme Growing Tree
-	 * @param dx abscisse d'entrÃ©e
+	 * Génère un labyrinthe en utilisant l'algorithme Growing Tree
+	 * @param dx abscisse d'entrée
 	 * @param dy abscisse de sortie
 	 */
 	private void generateMaze(int dx, int dy){
@@ -54,7 +54,7 @@ public class MazeGenerator {
 		
 		//Boucle principale
 		while(!pile.empty()){
-			//On rÃ©cupÃ¨re la derniÃ¨re cellule de la pile
+			//On récupère la dernière cellule de la pile
 			cellule = pile.peek();
 			lig = cellule[1];
 			col = cellule[0];
@@ -64,17 +64,17 @@ public class MazeGenerator {
 				this.maze[lig][col] += 16;
 			}
 
-			//Recherche les voisins non visitÃ©s
+			//Recherche les voisins non visités
 			voisins[0] = wasVisited(col,lig-1);
 			voisins[1] = wasVisited(col,lig+1);
 			voisins[2] = wasVisited(col-1,lig);
 			voisins[3] = wasVisited(col+1,lig);
 
-			//Si il n'y a pas de voisins non visitÃ©es, on dÃ©pile
+			//Si il n'y a pas de voisins non visitées, on dépile
 			if(voisins[0] && voisins[1] && voisins[2] && voisins[3]){
 				pile.pop();
 			}else{//Sinon, on choisit une direction au hasard
-				Collections.shuffle(choix);//MÃ©lange des directions
+				Collections.shuffle(choix);//Mélange des directions
 				i = 0;//Choix d'une direction
 				while(voisins[choix.get(i)]){
 					i++;
@@ -117,18 +117,18 @@ public class MazeGenerator {
 	/**
 	 * Teste si une cellule appartient au labyrinthe
 	 * @param x bascisse
-	 * @param y ordonÃ©e
-	 * @return boolÃ©en
+	 * @param y ordonée
+	 * @return booléen
 	 */
 	public boolean belongsToMaze(int x, int y){
 		return (x >= 0) && (x <= this.colonnes-1) && (y >= 0) && (y <= this.lignes-1);
 	}
 	
 	/**
-	 * Renvoie vrai si la cellule a Ã©tÃ© visitÃ©e ou si elle n'appartient pas au labyrinthe
+	 * Renvoie vrai si la cellule a été visitée ou si elle n'appartient pas au labyrinthe
 	 * @param x abscisse
-	 * @param y ordonnÃ©e
-	 * @return boolÃ©en
+	 * @param y ordonnée
+	 * @return booléen
 	 */
 	private boolean wasVisited(int x, int y){
 		return (belongsToMaze(x,y) && (this.maze[y][x] & 16)!=0) || !belongsToMaze(x,y);
@@ -167,7 +167,7 @@ public class MazeGenerator {
 	 * Teste si le mur du haut est ouvert
 	 * @param x
 	 * @param y
-	 * @return boolÃ©en
+	 * @return booléen
 	 */
 	public boolean isClosedOnTop(int x, int y){
 		return((this.maze[y][x] & 2)==0);
@@ -177,7 +177,7 @@ public class MazeGenerator {
 	 * Teste si le mur de gauche est ouvert
 	 * @param x
 	 * @param y
-	 * @return boolÃ©en
+	 * @return booléen
 	 */
 	public boolean isClosedOnLeft(int x, int y){
 		return((this.maze[y][x] & 4) == 0);
