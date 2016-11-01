@@ -14,7 +14,7 @@ import personnages.Personnage;
 /**
  * Classe principale
  * @author Meuleman
- * Fenetre dans laquelle le jeu sera lancé 
+ * Fenetre dans laquelle le jeu sera lancÃ© 
  */
 public class Fenetre extends JFrame{
 	
@@ -22,8 +22,8 @@ public class Fenetre extends JFrame{
 	 * Constantes
 	 */
 	private static final long serialVersionUID = 1L;
-	private static final int tailleCase = 4*14; //taille d'une case en pixels (doit être multiple de 4 pour placer les joueurs au centre)
-	private static final int nbCases = 2*8+1; //nombre de cases du labyrinthe (doit être impaire si l'on souhaite placer le drapeau au centre)
+	private static final int tailleCase = 4*14; //taille d'une case en pixels (doit Ãªtre multiple de 4 pour placer les joueurs au centre)
+	private static final int nbCases = 2*8+1; //nombre de cases du labyrinthe (doit Ãªtre impaire si l'on souhaite placer le drapeau au centre)
 	private static final int delay = 300; //temps entre deux mouvements des joueurs
 	private static final int refresh=10; //temps entre deux raffrachissement de l'affichage
 	private static final int[] flag={nbCases/2,nbCases/2}; //Emplacement du drapeau (ici au centre)
@@ -66,7 +66,7 @@ public class Fenetre extends JFrame{
 			}catch(InterruptedException e) {
 				e.printStackTrace();
 			}
-			//test si le jeu est fini ou si un joueur est hors-jeu à cause d'un ennemi ou parce qu'il a gangé
+			//test si le jeu est fini ou si un joueur est hors-jeu Ã  cause d'un ennemi ou parce qu'il a gangÃ©
 			for(int i=0;i<nbJoueurs;i++){ 
 				testLost(i);
 				testWon(i);
@@ -79,18 +79,18 @@ public class Fenetre extends JFrame{
 	}
 	
 	/**
-	 * Test si le joueur en position i a gagné et arrète le jeu dans ce cas
+	 * Test si le joueur en position i a gagnÃ© et arrÃ¨te le jeu dans ce cas
 	 * @param i Indice du joueur
 	 */
 	private void testWon(int i){ 
 		if((tabPers.get(i).getX()==flag[0])&&(tabPers.get(i).getY()==flag[1])){
-			message=message +tabPers.get(i)+" a gagnÃ© \n";
+			message=message +tabPers.get(i)+" a gagnÃƒÂ© \n";
 			retirerJoueur(i);
 		}
 	}
 	
 	/**
-	 * Test si le joueur en position i a perdu é cause d'un ennemi et le retire du jeu dans ce cas
+	 * Test si le joueur en position i a perdu Ã© cause d'un ennemi et le retire du jeu dans ce cas
 	 * @param i Indice du joueur
 	 */
 	private void testLost(int i){
@@ -105,7 +105,7 @@ public class Fenetre extends JFrame{
 	}
 	
 	/**
-	 * Retire un joueur et met é jour le titre de la fenetre
+	 * Retire un joueur et met Ã© jour le titre de la fenetre
 	 * @param i Indice du joueur
 	 */
 	public void retirerJoueur(int i){
@@ -125,11 +125,11 @@ public class Fenetre extends JFrame{
 	}
 	
 	/**
-	 * vérifie si un mouvement est valide
+	 * vÃ©rifie si un mouvement est valide
 	 * @param x position en x sur le labyrinthe
 	 * @param y Position en y
-	 * @param dX Déplacement en x
-	 * @param dY Déplacement en y
+	 * @param dX DÃ©placement en x
+	 * @param dY DÃ©placement en y
 	 * @return vrai si le mouvement est valide, faux sinon
 	 */
 	public boolean moveIsOk(int x, int y, int dX, int dY){
@@ -151,11 +151,11 @@ public class Fenetre extends JFrame{
 	}
 	
 	/**
-	 * Lance la fenetre en créant l'objet fen
+	 * Lance la fenetre en crÃ©ant l'objet fen
 	 * @param args
 	 */
 	public static void main(String[] args){
-		for(;;){
+		while(true){
 			Fenetre fen = new Fenetre();
 			fen.dispose();
 		}
