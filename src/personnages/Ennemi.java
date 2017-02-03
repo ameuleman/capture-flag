@@ -3,20 +3,20 @@ package personnages;
 import jeux.Fenetre;
 
 /**
- * Class hÈritant de Personnage
+ * Class h√©ritant de Personnage
  * @author Meuleman
- * ReprÈsente un ennemi non-joueur que le joueur doit Èviter
+ * Repr√©sente un ennemi non-joueur que le joueur doit √©viter
  */
 public class Ennemi extends Personnage implements Comportement{
 	
 	/**
-	 *  Constructeur d'Ennemi, lance un thread propre ‡ chaque ennemi
-	 * @param fen La fenetre d'affichage
-	 * @param nomSprite
-	 * @param x
-	 * @param y
-	 * @param tailleCase
-	 * @param delay
+	 *  Constructeur d'Ennemi, lance un thread propre √† chaque ennemi
+	 * @param fen Fenetre de lancement du jeu
+	 * @param couleur Couleur du joueur
+	 * @param x Coordonn√©e x sur le labyrinthe
+	 * @param y Coordonn√©e y sur le labyrinthe
+	 * @param tailleCase taille d'une case du labyrinthe en pixels
+	 * @param delay temps entre deux mouvements
 	 */
 	public Ennemi(Fenetre fen, String nomSprite, int x, int y, int tailleCase, int delay){
 		super(fen, nomSprite, x, y, tailleCase, delay);
@@ -25,7 +25,7 @@ public class Ennemi extends Personnage implements Comportement{
 	}
 	
 	/**
-	 * Comportement de l'ennemi alÈatoire
+	 * Comportement de l'ennemi al√©atoire
 	 */
 	public synchronized void comportement(){
 		int alea;
