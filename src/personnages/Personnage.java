@@ -11,12 +11,12 @@ import personnages.ImageException;
 /**
  * 
  * @author Meuleman
- * Class dont les Joueurs et les ennemis héritent
+ * Class dont les Joueurs et les ennemis hÃ©ritent
  */
 public abstract class Personnage{
 	protected int tailleCase;
 	protected int x,y; //position dans la matrice carte
-	protected int posX,posY; //position sur la fenétre
+	protected int posX,posY; //position sur la fenÃ©tre
 	Fenetre fen;
 	protected ArrayList<Image> sprites = new ArrayList<Image>() ; 
 	protected boolean deplacable=true,enVie=true;
@@ -26,7 +26,7 @@ public abstract class Personnage{
 	protected String nomSprite;
 	
 	/**
-	 * Constructeur par défaut de Personnage
+	 * Constructeur par dÃ©faut de Personnage
 	 */
 	public Personnage(){
 		this.tailleCase=10;
@@ -43,8 +43,8 @@ public abstract class Personnage{
 	 * 
 	 * @param fen Fenetre de lancement du jeu
 	 * @param couleur Couleur du joueur
-	 * @param x	Coordonnée x sur le labyrinthe
-	 * @param y Coordonnée y sur le labyrinthe
+	 * @param x	CoordonnÃ©e x sur le labyrinthe
+	 * @param y CoordonnÃ©e y sur le labyrinthe
 	 * @param tailleCase taille d'une case du labyrinthe en pixels
 	 * @param delay temps entre deux mouvements
 	 */
@@ -75,8 +75,8 @@ public abstract class Personnage{
 	}
 	
 	/**
-	 * Lance le thread de déplacement
-	 * @param dX Déplacement de case en x
+	 * Lance le thread de dÃ©placement
+	 * @param dX DÃ©placement de case en x
 	 * @param dY En y
 	 */
 	protected synchronized void deplacer(int dX, int dY){
@@ -134,7 +134,7 @@ public abstract class Personnage{
 	
 	/**
 	 * fonction qui lance la mort d'un personnage
-	 * @param ind indice du joueur é tuer
+	 * @param ind indice du joueur Ã© tuer
 	 */
 	public void mourir(int ind){
 		enVie=false;
@@ -159,7 +159,7 @@ public abstract class Personnage{
 	}
 	
 	/**
-	 * redéfinition de la méthode toString pour l'affichage
+	 * redÃ©finition de la mÃ©thode toString pour l'affichage
 	 */
 	public String toString(){
 		return nomSprite;
