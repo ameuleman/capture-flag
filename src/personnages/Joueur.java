@@ -8,25 +8,25 @@ import javax.swing.ImageIcon;
 import jeux.Fenetre;
 
 /**
- * Class hÈritant de Personnage
+ * Class h√©ritant de Personnage
  * @author Meuleman
- * ReprÈsente un personnage controlable par un joueur
+ * Repr√©sente un personnage controlable par un joueur
  */
 public class Joueur extends Personnage {
 	private int up, left, right, down;
 	
 	/**
 	 * Constructeur de Joueur
-	 * @param fen
-	 * @param couleur
-	 * @param x
-	 * @param y
-	 * @param tailleCase
-	 * @param delay
-	 * @param up Code de la touche qui permettra de dÈplacer le personnage vers le haut
+	 * @param fen Fenetre de lancement du jeu
+	 * @param couleur Couleur du joueur
+	 * @param x Coordonn√©e x sur le labyrinthe
+	 * @param y Coordonn√©e y sur le labyrinthe
+	 * @param tailleCase taille d'une case du labyrinthe en pixels
+	 * @param delay temps entre deux mouvements
+	 * @param up Code de la touche qui permettra de d√©placer le personnage vers le haut
 	 * @param down Vers le bas
-	 * @param left È gauche
-	 * @param right È droite
+	 * @param left √† gauche
+	 * @param right √† droite
 	 */
 	public Joueur(Fenetre fen, int num, int x, int y, int tailleCase, int delay, int up, int down, int left, int right){
 		super(fen, "joueur"+num, x,y,tailleCase, delay);
@@ -54,7 +54,7 @@ public class Joueur extends Personnage {
 	/**
 	 * 
 	 * @author Meuleman
-	 * Permet de contrÙler le personnage avec le clavier
+	 * Permet de contr√¥ler le personnage avec le clavier
 	 */
 	class ClavierListener implements KeyListener{
 		public void keyReleased(KeyEvent arg0){}
